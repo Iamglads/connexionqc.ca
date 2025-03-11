@@ -1,0 +1,11 @@
+/* TEAM */
+  Creator: Danie Carron
+  Contact: info@danielcaron.com
+  Location: Longueuil, Québec, Canada
+
+/* SITE */
+  Last update: 2024/03/24
+  Standards: HTML5, CSS3, JavaScript
+  Components: Next.js, React, Tailwind CSS
+  Software: Visual Studio Code, Git
+  Language: French
