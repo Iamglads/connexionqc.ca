@@ -2,19 +2,18 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Facebook, Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Facebook, Mail, Phone, MapPin, Clock, ExternalLink } from 'lucide-react';
 import { siteConfig } from '@/lib/config';
+import Image from "next/image"
 
 const navigation = {
   main: [
-    { name: 'Accueil', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'Contact', href: '/contact' },
   ],
   legal: [
-    { name: 'Politique de confidentialité', href: '/privacy-policy' },
-    { name: 'Conditions d\'utilisation', href: '/terms' },
+    { name: 'Politique de confidentialité', href: '/politique-de-confidentialite' },
   ],
 };
 
@@ -52,7 +51,7 @@ export default function Footer() {
           {/* Brand & Social */}
           <div className="space-y-6">
             <Link href="/" className="inline-block">
-              <span className="text-2xl font-bold">Danie Carron</span>
+              <span className="text-2xl font-bold">Production Daniel Carron</span>
             </Link>
             <p className="text-gray-400">
               Solutions audiovisuelles professionnelles pour vos événements
@@ -134,18 +133,32 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="mt-16 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} Danie Carron. Tous droits réservés.
-            </p>
+            <div className="flex flex-col md:flex-row items-center gap-4">
+              <p className="text-sm text-gray-400">
+                © {new Date().getFullYear()} Danie Carron. Tous droits réservés.
+              </p>
+              <div className="h-4 w-px bg-gray-700 hidden md:block" />
+              <a
+                href="https://web.kabatis.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-400 hover:text-[#fac2d8] transition-colors flex items-center group"
+              >
+                Développement web par Kabatis Web
+                <ExternalLink className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
+            </div>
 
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-4">
                 {paymentMethods.map((method) => (
-                  <img
+                  <Image
                     key={method.name}
                     src={method.icon}
                     alt={method.name}
-                    className="h-6 w-auto opacity-50 hover:opacity-75 transition-opacity"
+                    width={24}
+                    height={24}
+                    className="opacity-50 hover:opacity-75 transition-opacity"
                   />
                 ))}
               </div>

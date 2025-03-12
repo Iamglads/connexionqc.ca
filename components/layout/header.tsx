@@ -4,14 +4,14 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { MenuButton } from '@/components/ui/menu-button';
 import { cn } from '@/lib/utils';
 import { siteConfig } from '@/lib/config';
 
 const navigation = [
-  { name: 'Accueil', href: '/' },
   { name: 'Services', href: '/services' },
   { name: 'Portfolio', href: '/portfolio' },
   { name: 'Contact', href: '/contact' },
@@ -49,28 +49,30 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
-              <div className="relative h-8 w-[180px]">
-                <Image
-                  src={siteConfig.logo}
-                  alt={siteConfig.name}
-                  fill
-                  className="object-contain"
-                  priority
-                />
+              <div className="flex items-center">
+                <div className="relative h-8 w-8 mr-3">
+                  <Image
+                    src={siteConfig.logo}
+                    alt={siteConfig.name}
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+                <div className="text-white text-xl">
+                  <span className="font-normal">Daniel </span>
+                  <span className="font-bold text-[#fac2d8]">Caron</span>
+                </div>
               </div>
             </Link>
           </div>
           
           <div className="flex lg:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setMobileMenuOpen(true)}
-              className="text-white"
-            >
-              <span className="sr-only">Ouvrir le menu</span>
-              <Menu className="h-6 w-6" aria-hidden="true" />
-            </Button>
+            <MenuButton
+              isOpen={mobileMenuOpen}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="ml-4"
+            />
           </div>
 
           <div className="hidden lg:flex lg:gap-x-8 items-center">
@@ -119,25 +121,27 @@ export default function Header() {
         >
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
-              <div className="relative h-8 w-[180px]">
-                <Image
-                  src={siteConfig.logo}
-                  alt={siteConfig.name}
-                  fill
-                  className="object-contain"
-                  priority
-                />
+              <div className="flex items-center">
+                <div className="relative h-8 w-8 mr-3">
+                  <Image
+                    src={siteConfig.logo}
+                    alt={siteConfig.name}
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+                <div className="text-white text-xl">
+                  <span className="font-normal">Daniel </span>
+                  <span className="font-bold text-[#fac2d8]">Caron</span>
+                </div>
               </div>
             </Link>
-            <Button
-              variant="ghost"
-              size="icon"
+            <MenuButton
+              isOpen={mobileMenuOpen}
               onClick={() => setMobileMenuOpen(false)}
-              className="text-white"
-            >
-              <span className="sr-only">Fermer le menu</span>
-              <X className="h-6 w-6" aria-hidden="true" />
-            </Button>
+              className="ml-4"
+            />
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-800">
@@ -162,7 +166,7 @@ export default function Header() {
                 <Button
                   asChild
                   size="lg"
-                  className="w-full bg-[#fac2d8] hover:bg-[#fac2d8]/90 text-white rounded-full"
+                  className="w-full bg-[#fac2d8] hover:bg-[#fac2d8]/90 rounded-full"
                 >
                   <Link href="/soumission" onClick={() => setMobileMenuOpen(false)}>
                     <span>Demander une soumission</span>

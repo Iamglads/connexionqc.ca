@@ -1,29 +1,34 @@
+"use client";
+
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center rounded-md text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 relative overflow-hidden group",
   {
     variants: {
       variant: {
         default:
-          "relative overflow-hidden bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-[1.02] active:scale-[0.98] after:absolute after:inset-0 after:z-0 after:bg-[length:200%_200%] after:bg-[linear-gradient(to_right,#3b82f6,#2563eb,#3b82f6)] after:transition-all after:duration-500 hover:after:bg-right",
+          "bg-primary text-primary-foreground shadow hover:bg-primary/90 after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-r after:from-transparent after:via-white/20 after:to-transparent after:translate-x-[-200%] hover:after:translate-x-[200%] after:transition-transform after:duration-1000",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-input bg-transparent shadow-sm hover:bg-accent hover:text-accent-foreground relative after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-r after:from-transparent after:via-white/10 after:to-transparent after:translate-x-[-200%] hover:after:translate-x-[200%] after:transition-transform after:duration-1000",
         secondary:
-          "relative overflow-hidden bg-gradient-to-r from-gray-800 to-gray-900 text-white shadow-xl shadow-gray-900/25 hover:shadow-gray-900/40 hover:scale-[1.02] active:scale-[0.98] after:absolute after:inset-0 after:z-0 after:bg-[length:200%_200%] after:bg-[linear-gradient(to_right,#1f2937,#111827,#1f2937)] after:transition-all after:duration-500 hover:after:bg-right",
+          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        glow: "bg-primary text-primary-foreground shadow-[0_0_20px_rgba(250,192,216,0.3)] hover:shadow-[0_0_25px_rgba(250,192,216,0.5)] hover:bg-primary/90 transition-shadow",
+        gradient: "bg-gradient-to-r from-primary via-primary/80 to-primary text-primary-foreground hover:brightness-110 bg-[size:200%] hover:bg-[position:100%] transition-all duration-500",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
+        default: "h-9 px-4 py-2",
+        sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-12 rounded-lg px-8 text-base",
-        icon: "h-10 w-10",
+        icon: "h-9 w-9",
+        xl: "h-14 rounded-xl px-10 text-lg",
       },
     },
     defaultVariants: {
@@ -33,7 +38,7 @@ const buttonVariants = cva(
   }
 );
 
-interface ButtonProps
+export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
@@ -53,4 +58,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = "Button";
 
-export { Button,  };
+export { Button, buttonVariants };
