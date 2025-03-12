@@ -1,14 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
-const clientLogos = [
-  ['Fiera-Capital', 'Banff', 'Belron Canada', 'Le Groupe Maurice', 'Logo-Fiam', 'Mercedes-Benz', 'Montovi', 'Vasco-Design'],
-  ['CMMTQ', 'Dentons', "Arc'teryx", 'Country Club', 'Pneu-Supérieur', 'Odace', 'La cinematheque', 'Valeant'],
-  ['Logo-DSS', 'Peterbilt', 'Roxboro', 'Mova', 'Via-Rail', 'Ricova', 'Radio-Canada', 'Québec']
-];
+import Image from 'next/image';
+import { clients, groupClientsIntoRows } from '@/lib/clients-data';
 
 export default function Clients() {
   const controls = useAnimation();
@@ -22,6 +18,8 @@ export default function Clients() {
       controls.start('visible');
     }
   }, [controls, inView]);
+
+  const clientRows = groupClientsIntoRows(clients);
 
   return (
     <section className="py-20 bg-white overflow-hidden">
@@ -52,16 +50,23 @@ export default function Clients() {
                 animate={{ x: "-50%" }}
                 transition={{
                   repeat: Infinity,
-                  duration: 20, // Plus rapide
+                  duration: 20,
                   ease: "linear"
                 }}
               >
-                {[...clientLogos[0], ...clientLogos[0]].map((client, index) => (
+                {[...clientRows[0], ...clientRows[0]].map((client, index) => (
                   <div
-                    key={`${client}-${index}`}
+                    key={`${client.name}-${index}`}
                     className="flex items-center justify-center min-w-[150px] h-20 bg-gray-50 rounded-lg px-6"
                   >
-                    <span className="text-gray-600 font-medium">{client}</span>
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={client.logo}
+                        alt={client.name}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
                   </div>
                 ))}
               </motion.div>
@@ -79,16 +84,23 @@ export default function Clients() {
                 animate={{ x: "0%" }}
                 transition={{
                   repeat: Infinity,
-                  duration: 30, // Vitesse moyenne
+                  duration: 30,
                   ease: "linear"
                 }}
               >
-                {[...clientLogos[1], ...clientLogos[1]].map((client, index) => (
+                {[...clientRows[1], ...clientRows[1]].map((client, index) => (
                   <div
-                    key={`${client}-${index}`}
+                    key={`${client.name}-${index}`}
                     className="flex items-center justify-center min-w-[150px] h-20 bg-gray-50 rounded-lg px-6"
                   >
-                    <span className="text-gray-600 font-medium">{client}</span>
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={client.logo}
+                        alt={client.name}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
                   </div>
                 ))}
               </motion.div>
@@ -106,16 +118,23 @@ export default function Clients() {
                 animate={{ x: "-50%" }}
                 transition={{
                   repeat: Infinity,
-                  duration: 40, // Plus lent
+                  duration: 40,
                   ease: "linear"
                 }}
               >
-                {[...clientLogos[2], ...clientLogos[2]].map((client, index) => (
+                {[...clientRows[2], ...clientRows[2]].map((client, index) => (
                   <div
-                    key={`${client}-${index}`}
+                    key={`${client.name}-${index}`}
                     className="flex items-center justify-center min-w-[150px] h-20 bg-gray-50 rounded-lg px-6"
                   >
-                    <span className="text-gray-600 font-medium">{client}</span>
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={client.logo}
+                        alt={client.name}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
                   </div>
                 ))}
               </motion.div>

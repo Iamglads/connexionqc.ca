@@ -74,11 +74,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION,
-    yandex: process.env.YANDEX_VERIFICATION,
-    bing: process.env.BING_VERIFICATION,
-  },
+  
   icons: {
     icon: [
       { url: '/favicon.png', sizes: 'any' },

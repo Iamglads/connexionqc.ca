@@ -40,18 +40,24 @@ export default function Header() {
           : 'bg-transparent'
       )}
     >
+      <div className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+      
+      {/* Rounded shape in the middle */}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-24 h-24 bg-black/95 rounded-full -mb-12 hidden lg:block" />
+      
       <nav className="mx-auto max-w-7xl px-6 py-6" aria-label="Global">
         <div className="flex items-center justify-between">
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
-              <Image
-                src={siteConfig.logo}
-                alt={siteConfig.name}
-                width={180}
-                height={60}
-                className="h-8 w-auto"
-                priority
-              />
+              <div className="relative h-8 w-[180px]">
+                <Image
+                  src={siteConfig.logo}
+                  alt={siteConfig.name}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </Link>
           </div>
           
@@ -87,7 +93,7 @@ export default function Header() {
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-black hover:bg-white/90 rounded-full px-8"
+                className="bg-[#fac2d8] hover:bg-[#fac2d8]/90 text-white rounded-full px-8"
               >
                 <Link href="/soumission">
                   <span>Demander une soumission</span>
@@ -113,14 +119,15 @@ export default function Header() {
         >
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
-              <Image
-                src={siteConfig.logo}
-                alt={siteConfig.name}
-                width={180}
-                height={60}
-                className="h-8 w-auto"
-                priority
-              />
+              <div className="relative h-8 w-[180px]">
+                <Image
+                  src={siteConfig.logo}
+                  alt={siteConfig.name}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </Link>
             <Button
               variant="ghost"
@@ -155,7 +162,7 @@ export default function Header() {
                 <Button
                   asChild
                   size="lg"
-                  className="w-full bg-white text-black hover:bg-white/90 rounded-full"
+                  className="w-full bg-[#fac2d8] hover:bg-[#fac2d8]/90 text-white rounded-full"
                 >
                   <Link href="/soumission" onClick={() => setMobileMenuOpen(false)}>
                     <span>Demander une soumission</span>

@@ -27,8 +27,27 @@ const paymentMethods = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white">
-      <div className="minimal-container py-16">
+    <footer className="bg-black text-white relative">
+      {/* Rounded top edges and animated border */}
+      <div className="absolute inset-x-0 top-0 h-16 bg-black">
+        <div className="absolute inset-0">
+          <div className="absolute inset-x-0 -top-16 h-16 bg-black" style={{ borderRadius: '50% 50% 0 0' }} />
+        </div>
+        <motion.div
+          className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#fac2d8] to-transparent"
+          animate={{
+            opacity: [0.3, 1, 0.3],
+            scaleX: [0.9, 1, 0.9],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </div>
+
+      <div className="minimal-container py-16 mt-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Brand & Social */}
           <div className="space-y-6">
@@ -41,17 +60,17 @@ export default function Footer() {
             <div className="flex items-center space-x-4">
               <a
                 href={siteConfig.links.facebook}
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#fac0d5]/20 transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#fac2d8]/20 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Facebook className="h-5 w-5 text-[#fac0d5]" />
+                <Facebook className="h-5 w-5 text-[#fac2d8]" />
               </a>
               <a
                 href={`mailto:${siteConfig.contact.email}`}
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#fac0d5]/20 transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#fac2d8]/20 transition-colors"
               >
-                <Mail className="h-5 w-5 text-[#fac0d5]" />
+                <Mail className="h-5 w-5 text-[#fac2d8]" />
               </a>
             </div>
           </div>
@@ -67,7 +86,7 @@ export default function Footer() {
                     className="text-gray-400 hover:text-white transition-colors relative group"
                   >
                     {item.name}
-                    <span className="absolute left-0 bottom-0 w-0 h-px bg-[#fac0d5] transition-all duration-300 group-hover:w-full" />
+                    <span className="absolute left-0 bottom-0 w-0 h-px bg-[#fac2d8] transition-all duration-300 group-hover:w-full" />
                   </Link>
                 </li>
               ))}
@@ -80,7 +99,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-center space-x-3">
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-                  <Clock className="h-5 w-5 text-[#fac0d5]" />
+                  <Clock className="h-5 w-5 text-[#fac2d8]" />
                 </div>
                 <div className="text-gray-400">
                   <p>Lun - Ven: 9h - 17h</p>
@@ -89,7 +108,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-                  <Phone className="h-5 w-5 text-[#fac0d5]" />
+                  <Phone className="h-5 w-5 text-[#fac2d8]" />
                 </div>
                 <div>
                   <a
@@ -102,7 +121,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-                  <MapPin className="h-5 w-5 text-[#fac0d5]" />
+                  <MapPin className="h-5 w-5 text-[#fac2d8]" />
                 </div>
                 <span className="text-gray-400">
                   {siteConfig.contact.address}
@@ -139,7 +158,7 @@ export default function Footer() {
                     className="text-sm text-gray-400 hover:text-white transition-colors relative group"
                   >
                     {item.name}
-                    <span className="absolute left-0 bottom-0 w-0 h-px bg-[#fac0d5] transition-all duration-300 group-hover:w-full" />
+                    <span className="absolute left-0 bottom-0 w-0 h-px bg-[#fac2d8] transition-all duration-300 group-hover:w-full" />
                   </Link>
                 ))}
               </div>

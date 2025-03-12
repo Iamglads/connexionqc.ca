@@ -11,7 +11,7 @@ export async function sendQuoteEmail(data: any) {
     const adminMsg = {
       to: siteConfig.contact.email,
       from: {
-        email: siteConfig.emailConfig.auth.user,
+        email: siteConfig.emailConfig.from.email,
         name: siteConfig.name
       },
       subject: `Nouvelle demande de soumission - ${data.eventType}`,
@@ -22,8 +22,8 @@ export async function sendQuoteEmail(data: any) {
     const clientMsg = {
       to: data.email,
       from: {
-        email: siteConfig.emailConfig.auth.user,
-        name: siteConfig.name
+        email: siteConfig.emailConfig.from.email,
+        name: siteConfig.emailConfig.from.name
       },
       subject: `Confirmation de votre demande de soumission - ${siteConfig.name}`,
       html: quoteConfirmationTemplate(data),
@@ -43,7 +43,7 @@ export async function sendQuoteEmail(data: any) {
 }
 
 // Vérifier la configuration de SendGrid
-export async function verifyEmailConfig() {
+async function verifyEmailConfig() {
   try {
     // Vérifie si la clé API est définie
     if (!process.env.SENDGRID_API_KEY) {

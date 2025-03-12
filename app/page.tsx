@@ -8,14 +8,15 @@ import Features from '@/components/sections/features';
 import Contact from '@/components/sections/contact';
 import { siteConfig } from '@/lib/config';
 
+
 export default function Home() {
   return (
     <>
       <Hero />
       <Services services={siteConfig.services} />
       <About />
-      <Portfolio items={siteConfig.portfolio} />
-      <Clients clients={siteConfig.clients} />
+      <Portfolio />
+      <Clients />
       <Features />
       <Contact />
     </>

@@ -4,11 +4,12 @@ import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-24">
+    <section className="relative min-h-screen flex items-center overflow-hidden py-24">
       {/* Arrière-plan animé */}
       <div className="absolute inset-0 bg-black">
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent z-10" />
@@ -64,7 +65,7 @@ export default function Hero() {
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-black hover:bg-white/90 rounded-full px-8"
+                className="bg-[#fac2d8] hover:bg-[#fac2d8]/90 text-white rounded-full px-8"
               >
                 <Link href="/contact">
                   <span>Démarrer un projet</span>
@@ -124,11 +125,14 @@ export default function Hero() {
             className="relative aspect-square hidden lg:block"
           >
             <div className="absolute inset-0 bg-gradient-radial from-white/20 to-transparent rounded-full animate-pulse" />
-            <img
-              src="https://images.unsplash.com/photo-1492666673288-3c4b4576ad9a?auto=format&fit=crop&q=80"
-              alt="Audiovisuel"
-              className="w-full h-full object-cover rounded-3xl hover:scale-105 transition-transform duration-500"
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src="/images/realisations/Evenement-8-juillet-2021-2-1-1.jpg"
+                alt="Audiovisuel"
+                fill
+                className="object-cover rounded-3xl hover:scale-105 transition-transform duration-500"
+              />
+            </div>
             <div className="absolute -bottom-8 -right-8 bg-white text-black p-6 rounded-2xl shadow-xl">
               <div className="text-4xl font-bold">24/7</div>
               <div className="text-sm">Support technique</div>
