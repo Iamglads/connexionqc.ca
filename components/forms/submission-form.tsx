@@ -10,7 +10,27 @@ import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Loader2 } from 'lucide-react';
+
+const eventTypes = [
+  "Conférence",
+  "Réunion",
+  "Gala",
+  "Atelier de formation",
+  "Salon d'exposition",
+  "Présentation hybride",
+  "Présentation sur grand écran",
+  "Journée porte ouverte",
+  "Cinéma extérieur",
+  "Cinéma intérieur",
+  "Vidéo mapping",
+  "Ambiance sonore",
+  "Sonorisation ambiophonique DTS 5.1/7.1",
+  "Tournage cinéma",
+  "Mariage",
+  "Location de matériel audiovisuel"
+];
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Le nom complet est requis' }),
@@ -182,9 +202,20 @@ export function SubmissionForm() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Quel genre d'événement</FormLabel>
-                <FormControl>
-                  <Input placeholder="Ex: Conférence, Gala, etc." {...field} />
-                </FormControl>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger className="h-12">
+                      <SelectValue placeholder="Sélectionnez le type d'événement" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    {eventTypes.map((type) => (
+                      <SelectItem key={type} value={type}>
+                        {type}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
                 <FormMessage />
               </FormItem>
             )}
