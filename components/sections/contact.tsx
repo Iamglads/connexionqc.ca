@@ -39,10 +39,10 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            {/* Effet de lueur */}
-      
+            {/* Effet de lueur 
+   
             <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#fac0d5]/20 rounded-full blur-3xl" />
-            
+            */}
             {/* Contenu */}
             <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <div className="space-y-8">
