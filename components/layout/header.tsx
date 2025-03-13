@@ -127,11 +127,11 @@ export default function Header() {
               <Button
                 asChild
                 size="lg"
-                className="bg-[#fac2d8] hover:bg-[#fac2d8]/90 text-white rounded-full px-8"
+                className="bg-[#fac2d8] hover:bg-[#fac2d8]/90 text-black rounded-full px-8"
               >
                 <Link href="/soumission">
                   <span>Demander une soumission</span>
-                  <ArrowUpRight className="ml-2 h-5 w-5" />
+                  <ArrowUpRight className="ml-2 h-5 w-5 bg-black rounded-full p-2" />
                 </Link>
               </Button>
             </div>
