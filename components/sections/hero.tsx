@@ -25,6 +25,10 @@ export default function Hero() {
       </div>
 
       <div className="minimal-container relative z-20">
+           <div className="absolute -top-20 -left-20 w-64 h-64 bg-[#fac0d5]/20 rounded-full blur-3xl" />
+            <div className="absolute -bottom-20 -right-64 w-20 h-64 bg-[#fac0d5]/20 rounded-full blur-3xl" />
+           <div className="absolute -top-20 -left-20 w-20 h-20 bg-[#fac0d5]/20 rounded-full blur-3xl" />
+            <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#fac0d5]/20 rounded-full blur-3xl" />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
