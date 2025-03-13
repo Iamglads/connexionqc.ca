@@ -10,7 +10,7 @@ export const siteConfig = {
   contact: {
     email: "info@kabatis.com",
     phone: "450 677-2593",
-    address: "441 rue Ste-Hélène, suite #2, Longueuil, Québec J4R 3R3"
+    address: "441 rue Ste-Hélène, suite #2, Longueuil"
   },
   emailConfig: {
     from: {
