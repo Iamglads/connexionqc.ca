@@ -21,7 +21,7 @@ export default function Portfolio() {
   };
 
   return (
-    <section id="realisations" className="py-32 bg-black relative overflow-hidden">
+    <section id="portfolio" className="py-32 bg-black relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#fac2d8_0%,_transparent_35%)] opacity-20" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_#fac2d8_0%,_transparent_35%)] opacity-20" />
