@@ -34,7 +34,7 @@ export default function Services({ services }: ServicesProps) {
   });
 
   return (
-    <section className="py-32 bg-black relative overflow-hidden" ref={ref}>
+    <section id="services" className="py-32 bg-black relative overflow-hidden" ref={ref}>
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#fac2d8_0%,_transparent_35%)] opacity-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_#fac2d8_0%,_transparent_35%)] opacity-10" />
