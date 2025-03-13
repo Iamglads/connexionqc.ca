@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { MenuButton } from '@/components/ui/menu-button';
@@ -12,15 +12,27 @@ import { cn } from '@/lib/utils';
 import { siteConfig } from '@/lib/config';
 
 const navigation = [
-  { name: 'Services', href: '/services' },
-  { name: 'Portfolio', href: '/portfolio' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Services', href: '/#services' },
+  { name: 'Réalisations', href: '/#portfolio' },
+  { name: 'Contact', href: '/#contact' },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  // Empêcher le défilement du body quand le menu mobile est ouvert
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,10 +43,37 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    
+    // Si nous sommes sur une autre page, d'abord naviguer vers l'accueil
+    if (pathname !== '/') {
+      window.location.href = href;
+      return;
+    }
+
+    const targetId = href.replace('/#', '');
+    const element = document.getElementById(targetId);
+    
+    if (element) {
+      const headerOffset = 100; // Offset pour tenir compte du header fixe
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+
+      // Fermer le menu mobile si ouvert
+      setMobileMenuOpen(false);
+    }
+  };
+
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full',
         scrolled
           ? 'bg-black/95 backdrop-blur-sm'
           : 'bg-transparent'
@@ -74,19 +113,15 @@ export default function Header() {
 
           <div className="hidden lg:flex lg:gap-x-8 items-center">
             {navigation.map((item) => (
-              <Link
+              <a
                 key={item.name}
                 href={item.href}
-                className={cn(
-                  'text-sm font-medium transition-colors relative group',
-                  pathname === item.href
-                    ? 'text-white'
-                    : 'text-gray-300 hover:text-white'
-                )}
+                onClick={(e) => handleSmoothScroll(e, item.href)}
+                className="text-sm font-medium transition-colors relative group text-gray-300 hover:text-white"
               >
                 {item.name}
                 <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
-              </Link>
+              </a>
             ))}
             <div className="ml-6">
               <Button
@@ -144,19 +179,14 @@ export default function Header() {
             <div className="-my-6 divide-y divide-gray-800">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
-                  <Link
+                  <a
                     key={item.name}
                     href={item.href}
-                    className={cn(
-                      '-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition-colors',
-                      pathname === item.href
-                        ? 'text-white bg-gray-900'
-                        : 'text-gray-300 hover:bg-gray-900 hover:text-white'
-                    )}
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={(e) => handleSmoothScroll(e, item.href)}
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-300 hover:bg-gray-900 hover:text-white transition-colors"
                   >
                     {item.name}
-                  </Link>
+                  </a>
                 ))}
               </div>
               <div className="py-6">
@@ -170,6 +200,32 @@ export default function Header() {
                     <ArrowUpRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
+              </div>
+
+              {/* Informations de contact */}
+              <div className="py-6 space-y-6">
+                <h3 className="text-lg font-semibold text-white mb-4">Nous contacter</h3>
+                <div className="space-y-4">
+                  <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="flex items-center text-gray-300 hover:text-white">
+                    <Phone className="h-5 w-5 mr-3 text-[#fac2d8]" />
+                    <span>{siteConfig.contact.phone}</span>
+                  </a>
+                  <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center text-gray-300 hover:text-white">
+                    <Mail className="h-5 w-5 mr-3 text-[#fac2d8]" />
+                    <span>{siteConfig.contact.email}</span>
+                  </a>
+                  <div className="flex items-center text-gray-300">
+                    <MapPin className="h-5 w-5 mr-3 text-[#fac2d8]" />
+                    <span>{siteConfig.contact.address}</span>
+                  </div>
+                  <div className="flex items-center text-gray-300">
+                    <Clock className="h-5 w-5 mr-3 text-[#fac2d8]" />
+                    <div>
+                      <p>Lun - Ven: 9h - 17h</p>
+                      <p>Sam - Dim: Sur RDV</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
