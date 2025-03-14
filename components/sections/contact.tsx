@@ -3,8 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, ArrowRight, Clock, PhoneCall } from 'lucide-react';
 import Link from 'next/link';
 
@@ -16,7 +14,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 bg-gradient-to-b from-black to-gray-900">
-      <div className="container mx-auto px-4">
+      <div className="minimal-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -39,10 +37,10 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            {/* Effet de lueur    */}
-   
-       
-         
+            {/* Effet de lueur */}
+            <div className="absolute -top-20 -left-20 w-64 h-64 bg-[#fac0d5]/20 rounded-full blur-3xl" />
+            <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#fac0d5]/20 rounded-full blur-3xl" />
+            
             {/* Contenu */}
             <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <div className="space-y-8">
