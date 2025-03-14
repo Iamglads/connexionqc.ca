@@ -8,7 +8,6 @@ import Features from '@/components/sections/features';
 import Contact from '@/components/sections/contact';
 import { siteConfig } from '@/lib/config';
 
-
 export default function Home() {
   return (
     <>
