@@ -41,7 +41,7 @@ export default function Contact() {
           >
             {/* Effet de lueur    */}
    
-            <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#fac0d5]/20 rounded-full blur-3xl" />
+            <div class="absolute -bottom-20 right-20 w-64 h-64 bg-[#fac0d5]/20 rounded-full blur-3xl hidden md:block"></div>
          
             {/* Contenu */}
             <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
