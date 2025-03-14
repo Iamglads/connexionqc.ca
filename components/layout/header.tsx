@@ -131,7 +131,7 @@ export default function Header() {
               >
                 <Link href="/soumission">
                   <span>Demander une soumission</span>
-                  <ArrowUpRight className="ml-2 h-5 w-5 bg-black rounded-full p-2" />
+                  <ArrowUpRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>
