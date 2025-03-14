@@ -39,7 +39,7 @@ export default function Services({ services }: ServicesProps) {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#fac2d8_0%,_transparent_35%)] opacity-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_#fac2d8_0%,_transparent_35%)] opacity-10" />
       
-      <div className="container mx-auto px-4">
+      <div className="minimal-container">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
