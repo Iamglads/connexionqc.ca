@@ -80,7 +80,7 @@ export default function Header() {
       )}
     >
       <div className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-      
+         <div className="minimal-container">
       <nav className="mx-auto max-w-7xl px-6 py-6" aria-label="Global">
         <div className="flex items-center justify-between">
           <div className="flex lg:flex-1">
@@ -101,6 +101,7 @@ export default function Header() {
                 </div>
               </div>
             </Link>
+                  </div>
           </div>
           
           <div className="flex lg:hidden">
