@@ -97,8 +97,7 @@ export default function Header() {
                     />
                   </div>
                   <div className="text-white text-xl">
-                    <span className="font-normal">Daniel </span>
-                    <span className="font-bold text-[#fac2d8]">Caron</span>
+                    <span className="font-bold text-[#fac2d8]">Connexion</span>
                   </div>
                 </div>
               </Link>
@@ -165,8 +164,8 @@ export default function Header() {
                     />
                   </div>
                   <div className="text-white text-xl">
-                    <span className="font-normal">Daniel </span>
-                    <span className="font-bold text-[#fac2d8]">Caron</span>
+                    <span className="font-normal">DC </span>
+                    <span className="font-bold text-[#fac2d8]">Connexion</span>
                   </div>
                 </div>
               </Link>

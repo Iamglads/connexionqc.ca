@@ -2,73 +2,73 @@ import { Project } from '@/types/portfolio';
 
 export const projects: Project[] = [
   {
-    id: "projet-13-novembre",
-    title: "Projet 13 novembre 2024",
-    description: "Installation audiovisuelle complète pour un événement corporatif",
-    image: "/images/realisations/Projet-13-novembre-2024-1.jpg",
-    category: "Corporate"
+    id: "audio-setup",
+    title: "Configuration Audio Pro",
+    description: "Installation sonore complète pour une salle de concert",
+    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80",
+    category: "Sonorisation"
   },
   {
-    id: "cop-15-2022",
-    title: "COP-15 2022",
-    description: "Solutions audiovisuelles pour une conférence internationale",
-    image: "/images/realisations/Cop-15202022-2-X21.jpg",
+    id: "conference-setup",
+    title: "Conférence Corporative",
+    description: "Solutions audiovisuelles pour conférence internationale",
+    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80",
     category: "Conférence"
   },
   {
-    id: "cinema-arcteryx",
-    title: "Cinéma Arc'teryx",
-    description: "Projection cinématographique en plein air",
-    image: "/images/realisations/Cinema20Arc20teryx201020decembre202022-2-X21.jpg",
+    id: "outdoor-cinema",
+    title: "Cinéma en Plein Air",
+    description: "Projection cinématographique extérieure",
+    image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80",
     category: "Cinéma"
   },
   {
-    id: "origine-2019",
-    title: "Origine Mars 2019",
-    description: "Installation sonore et visuelle immersive",
-    image: "/images/realisations/Origine-21-mars-2019-1-X21.jpg",
+    id: "immersive-experience",
+    title: "Expérience Immersive",
+    description: "Installation audiovisuelle immersive",
+    image: "https://images.unsplash.com/photo-1492666673288-3c4b4576ad9a?auto=format&fit=crop&q=80",
     category: "Installation"
   },
   {
-    id: "grand-prix",
-    title: "Grand Prix",
-    description: "Système audiovisuel pour événement sportif",
-    image: "/images/realisations/Grand-Prix.jpg",
-    category: "Sport"
+    id: "stage-lighting",
+    title: "Éclairage Scénique",
+    description: "Système d'éclairage pour événement",
+    image: "https://images.unsplash.com/photo-1504680177321-2e9a23b9e9e8?auto=format&fit=crop&q=80",
+    category: "Éclairage"
   },
   {
-    id: "evenement-juillet-2021",
-    title: "Événement Juillet 2021",
+    id: "corporate-event",
+    title: "Événement Corporatif",
     description: "Configuration audiovisuelle complète",
-    image: "/images/realisations/Evenement-8-juillet-2021-2-1-1.jpg",
+    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80",
     category: "Événement"
   },
   {
-    id: "montreal-joue",
-    title: "Montréal Joue",
+    id: "interactive-display",
+    title: "Affichage Interactif",
     description: "Installation interactive et projection",
-    image: "/images/realisations/Montreal-joue-1.jpg",
+    image: "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?auto=format&fit=crop&q=80",
     category: "Interactif"
   },
   {
-    id: "market",
-    title: "Market",
-    description: "Solutions audiovisuelles pour espace commercial",
-    image: "/images/realisations/Market.jpg",
-    category: "Commercial"
+    id: "led-wall",
+    title: "Mur LED",
+    description: "Installation de mur vidéo LED",
+    image: "https://images.unsplash.com/photo-1550305080-4e029753abcf?auto=format&fit=crop&q=80",
+    category: "Vidéo"
   },
   {
-    id: "hilton-bonaventure",
-    title: "Hilton Bonaventure",
-    description: "Configuration pour événement hôtelier",
-    image: "/images/realisations/Hilton-Bonaventure-1.jpg",
-    category: "Hôtellerie"
+    id: "concert-sound",
+    title: "Sonorisation Concert",
+    description: "Configuration audio pour concert",
+    image: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&q=80",
+    category: "Sonorisation"
   },
   {
-    id: "banff-live",
-    title: "Banff Live",
-    description: "Diffusion en direct et sonorisation",
-    image: "/images/realisations/Banff-Live-2-X21.jpg",
-    category: "Live"
+    id: "projection-mapping",
+    title: "Mapping Vidéo",
+    description: "Projection architecturale",
+    image: "https://images.unsplash.com/photo-1559662780-c3bab6f7e00b?auto=format&fit=crop&q=80",
+    category: "Projection"
   }
 ];

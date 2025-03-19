@@ -57,7 +57,7 @@ export default function About() {
           >
             <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1492666673288-3c4b4576ad9a?auto=format&fit=crop&q=80"
+                src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80"
                 alt="Notre expertise"
                 className="object-cover w-full h-full"
               />

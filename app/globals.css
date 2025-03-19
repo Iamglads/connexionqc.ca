@@ -71,6 +71,13 @@
   --ring: 340 89% 87%;
 }
 
+/* Empêcher le défilement horizontal sur mobile */
+html, body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
 @layer base {
   * {
     @apply border-border;

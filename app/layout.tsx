@@ -7,7 +7,7 @@ import SchemaOrg from '@/components/layout/schema-org';
 import { siteConfig } from '@/lib/config';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://danielcaron.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://dcconnexion.com'),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: "Expert en location d'équipement audiovisuel au Québec - Solutions professionnelles pour tous vos événements",
     images: [siteConfig.ogImage],
-    creator: '@daniecarron',
+    creator: '@dcconnexion',
   },
   alternates: {
     canonical: siteConfig.url,
@@ -74,7 +74,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  
   icons: {
     icon: [
       { url: '/favicon.png', sizes: 'any' },
@@ -106,17 +105,17 @@ export default function RootLayout({
         <SchemaOrg />
         <link rel="alternate" hrefLang="fr-CA" href={siteConfig.url} />
         <meta name="geo.region" content="CA-QC" />
-        <meta name="geo.placename" content="Longueuil" />
-        <meta name="geo.position" content="45.52247406361339;-73.51498672346976" />
-        <meta name="ICBM" content="45.52247406361339, -73.51498672346976" />
+        <meta name="geo.placename" content="Montréal" />
+        <meta name="geo.position" content="45.5017,-73.5673" />
+        <meta name="ICBM" content="45.5017,-73.5673" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="theme-color" content="#000000" />
       </head>
       <body className="min-h-screen flex flex-col font-objectivity">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <Header />

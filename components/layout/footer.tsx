@@ -51,7 +51,7 @@ export default function Footer() {
           {/* Brand & Social */}
           <div className="space-y-6">
             <Link href="/" className="inline-block">
-              <span className="text-2xl font-bold">Production Daniel Carron</span>
+              <span className="text-2xl font-bold">DC Connexion</span>
             </Link>
             <p className="text-gray-400">
               Solutions audiovisuelles professionnelles pour vos événements
@@ -135,7 +135,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex flex-col md:flex-row items-center gap-4">
               <p className="text-sm text-gray-400">
-                © {new Date().getFullYear()} Danie Carron. Tous droits réservés.
+                © {new Date().getFullYear()} DC Connexion. Tous droits réservés.
               </p>
               <div className="h-4 w-px bg-gray-700 hidden md:block" />
               <a

@@ -25,10 +25,6 @@ export default function Hero() {
       </div>
 
       <div className="minimal-container relative z-20">
-           <div className="absolute -top-20 -left-20 w-104 h-104 bg-[#fac0d5]/20 rounded-full blur-3xl" />
-            <div className="absolute -bottom-20 -right-64 w-64 h-64 bg-[#fac0d5]/20 rounded-full blur-3xl" />
-           <div className="absolute -top-20 -left-20 w-100 h-100 bg-[#fac0d5]/20 rounded-full blur-3xl" />
-            <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#fac0d5]/20 rounded-full blur-3xl" />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -69,7 +65,7 @@ export default function Hero() {
               <Button
                 asChild
                 size="lg"
-                className="bg-[#fac2d8] hover:bg-[#fac2d8]/90 text-black rounded-full px-8"
+                className="bg-[#fac2d8] hover:bg-[#fac2d8]/90 text-white rounded-full px-8"
               >
                 <Link href="/contact">
                   <span>Démarrer un projet</span>
@@ -131,7 +127,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-radial from-white/20 to-transparent rounded-full animate-pulse" />
             <div className="relative w-full h-full">
               <Image
-                src="/images/realisations/Evenement-8-juillet-2021-2-1-1.jpg"
+                src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&q=80"
                 alt="Audiovisuel"
                 fill
                 className="object-cover rounded-3xl hover:scale-105 transition-transform duration-500"

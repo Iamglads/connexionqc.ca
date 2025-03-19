@@ -1,21 +1,21 @@
 export const siteConfig = {
-  name: "Daniel Carron",
+  name: "DC Connexion",
   description: "Expert en location d'équipement audiovisuel au Québec - Créateur d'ambiances et d'expériences uniques",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://danielcaron.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://dcconnexion.com",
   ogImage: "/og-image.jpg",
   logo: "/favicon.png",
   links: {
-    facebook: "https://facebook.com/daniecarron"
+    facebook: "https://facebook.com/dcconnexion"
   },
   contact: {
-    email: "info@kabatis.com",
-    phone: "450 677-2593",
-    address: "441 rue Ste-Hélène, suite #2, Longueuil"
+    email: "info@dcconnexion.com",
+    phone: "514 555-1234",
+    address: "789 boulevard St-Laurent, suite #301, Montréal, Québec H2X 1Y6"
   },
   emailConfig: {
     from: {
-      email: "info@kabatis.com",
-      name: "Danie Carron"
+      email: "info@dcconnexion.com",
+      name: "DC Connexion"
     }
   },
   services: [
@@ -56,8 +56,6 @@ export const siteConfig = {
       image: "https://images.unsplash.com/photo-1560698741-da8b7d4f7f8c?auto=format&fit=crop&q=80"
     }
   ]
-
-
 };
 
 const colorConfig = {

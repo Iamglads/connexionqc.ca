@@ -24,7 +24,7 @@ export default function SubmissionPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Demande de soumission
             </h1>
-            <p className="text-lg text-gray-400 max-w-1/2">
+            <p className="text-lg text-gray-400">
               Remplissez le formulaire ci-dessous et nous vous contacterons rapidement avec une proposition adaptée à vos besoins.
             </p>
           </div>
