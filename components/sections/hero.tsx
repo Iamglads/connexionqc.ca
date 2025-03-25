@@ -10,20 +10,6 @@ import { Button } from '@/components/ui/button';
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden py-24">
-      {/* Arrière-plan animé */}
-      <div className="absolute inset-0 bg-black">
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent z-10" />
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover opacity-50"
-        >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-set-up-of-a-concert-hall-10885-large.mp4" type="video/mp4" />
-        </video>
-      </div>
-
       <div className="minimal-container relative z-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
