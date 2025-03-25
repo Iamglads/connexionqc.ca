@@ -65,7 +65,7 @@ export default function Hero() {
               <Button
                 asChild
                 size="lg"
-                className="bg-[#fac2d8] hover:bg-[#fac2d8]/90 text-white rounded-full px-8"
+                className="bg-[#fac2d8] hover:bg-[#fac2d8]/90 text-black rounded-full px-8"
               >
                 <Link href="/contact">
                   <span>Démarrer un projet</span>
@@ -130,7 +130,7 @@ export default function Hero() {
                 src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&q=80"
                 alt="Audiovisuel"
                 fill
-                className="object-cover rounded-3xl hover:scale-105 transition-transform duration-500"
+                className="object-contain rounded-3xl hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="absolute -bottom-8 -right-8 bg-white text-black p-6 rounded-2xl shadow-xl">
