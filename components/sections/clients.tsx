@@ -57,7 +57,7 @@ export default function Clients() {
                 {[...clientRows[0], ...clientRows[0]].map((client, index) => (
                   <div
                     key={`${client.name}-${index}`}
-                    className="flex items-center justify-center min-w-[150px] h-20 bg-gray-50 rounded-lg px-6"
+                    className="flex items-center justify-center min-w-[150px] h-20 px-6"
                   >
                     <div className="relative w-full h-full">
                       <Image
