@@ -41,7 +41,7 @@ export default function Contact() {
 
   const onSubmit = async (data: FormValues) => {
     console.log(data);
-    // Implement form submission logic here
+    alert("Bonjour, ce formulaire est indisponible pour le moment. Utilisez notre formulaire de la page soumission pour nous faire parvenir vos besoins. Merci!")
   };
 
   return (
