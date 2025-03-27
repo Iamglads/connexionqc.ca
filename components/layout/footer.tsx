@@ -8,9 +8,9 @@ import Image from "next/image"
 
 const navigation = {
   main: [
-    { name: 'Services', href: '/services' },
-    { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Portfolio', href: '/#portfolio' },
+    { name: 'Contact', href: '/#contact' },
   ],
   legal: [
     { name: 'Politique de confidentialité', href: '/politique-de-confidentialite' },
