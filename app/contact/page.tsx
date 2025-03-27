@@ -3,7 +3,7 @@ import { siteConfig } from '@/lib/config';
 import ContactSection from '@/components/sections/contact';
 
 export const metadata: Metadata = {
-  title: 'Contact',
+  title: 'Contact | DC Connexion',
   description: 'Contactez-nous pour tous vos besoins en équipement audiovisuel. Location et services professionnels à Montréal et ses environs.',
   openGraph: {
     title: 'Contact | Danie Carron',
