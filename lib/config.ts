@@ -1,20 +1,20 @@
 export const siteConfig = {
   name: "DC Connexion",
   description: "Expert en location d'équipement audiovisuel au Québec - Créateur d'ambiances et d'expériences uniques",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://dcconnexion.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://connexionqc.com",
   ogImage: "/og-image.jpg",
   logo: "/favicon.png",
   links: {
     facebook: "https://facebook.com/dcconnexion"
   },
   contact: {
-    email: "info@dcconnexion.com",
+    email: "kbatis.web@gmail.com",
     phone: "(514) 447-8567",
     address: "789 boulevard St-Laurent, Montréal"
   },
   emailConfig: {
     from: {
-      email: "info@dcconnexion.com",
+      email: "info@kabatis.com",
       name: "DC Connexion"
     }
   },
