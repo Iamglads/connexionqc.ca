@@ -180,7 +180,6 @@ export default function Contact() {
                     <h3 className="text-xl font-semibold text-white mb-2">Horaires d'ouverture</h3>
                     <ul className="space-y-2 text-gray-400">
                       <li>Lundi - Vendredi: 9h00 - 17h00</li>
-                      <li>Samedi - Dimanche: Sur rendez-vous</li>
                     </ul>
                   </div>
                 </div>
@@ -194,9 +193,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Notre adresse</h3>
                     <p className="text-gray-400">
-                      789 boulevard St-Laurent, suite #301<br />
-                      Montréal, Québec<br />
-                      H2X 1Y6
+                       789 boulevard St-Laurent, Montréal
                     </p>
                   </div>
                 </div>
@@ -213,7 +210,7 @@ export default function Contact() {
                       href="mailto:info@dcconnexion.com"
                       className="text-gray-400 hover:text-white transition-colors"
                     >
-                      info@dcconnexion.com
+                      info@connexionqc.com
                     </a>
                   </div>
                 </div>
@@ -231,13 +228,15 @@ export default function Contact() {
                         href="tel:5145551234"
                         className="block text-gray-400 hover:text-white transition-colors"
                       >
-                        Bureau: (514) 555-1234
+                        Bureau: (514) 447-8567
+
                       </a>
                       <a
                         href="tel:5145551235"
                         className="block text-gray-400 hover:text-white transition-colors"
                       >
-                        Urgence: (514) 555-1235
+                        Urgence: (514) 447-8567
+
                       </a>
                     </div>
                   </div>
