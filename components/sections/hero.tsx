@@ -116,7 +116,7 @@ export default function Hero() {
                 src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&q=80"
                 alt="Audiovisuel"
                 fill
-                className="object-contain rounded-3xl hover:scale-105 transition-transform duration-500"
+                className="object-cover rounded-full hover:scale-102 transition-transform duration-500"
               />
             </div>
             <div className="absolute -bottom-8 -right-8 bg-white text-black p-6 rounded-2xl shadow-xl">
