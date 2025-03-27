@@ -62,8 +62,9 @@ export default function About() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 bg-primary-500 text-white p-6 rounded-lg">
-              <div className="text-4xl font-bold">20+</div>
+       
+            <div className="absolute -bottom-8 -right-8 bg-white text-black p-6 rounded-2xl shadow-xl">
+              <div className="text-4xl font-bold">10+</div>
               <div className="text-sm">années d'expérience</div>
             </div>
           </motion.div>
