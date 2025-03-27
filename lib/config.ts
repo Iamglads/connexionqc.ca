@@ -9,8 +9,8 @@ export const siteConfig = {
   },
   contact: {
     email: "info@dcconnexion.com",
-    phone: "514 555-1234",
-    address: "789 boulevard St-Laurent, suite #301, Montréal, Québec H2X 1Y6"
+    phone: "(514) 447-8567",
+    address: "789 boulevard St-Laurent, Montréal"
   },
   emailConfig: {
     from: {
