@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Demande de soumission | Production Daniel Caron',
+  title: 'Demande de soumission | DC Connexion',
   description: 'Obtenez une soumission personnalisée pour votre événement. Location d\'équipement audiovisuel professionnel à Montréal et ses environs.',
   openGraph: {
     title: 'Demande de soumission | Danie Carron',
